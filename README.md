@@ -29,7 +29,6 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`best-of-n-solving`](resources/best-of-n-solving/SKILL.md) - Try multiple approaches to a hard problem in parallel using isolated git worktrees, then pick the best solution.
 - [`parallel-exploring`](resources/parallel-exploring/SKILL.md) - Explore a large codebase fast by launching multiple read-only subagents that investigate different areas simultaneously.
 - [`grinding-until-pass`](resources/grinding-until-pass/SKILL.md) - Keep iterating autonomously — fix, run, check, repeat — until tests pass, the build succeeds, or linting is clean.
-- [`babysitting-pr`](resources/babysitting-pr/SKILL.md) - Monitor an open PR for CI failures, review comments, and merge conflicts — then fix them automatically to keep the PR merge-ready.
 - [`finding-dev-server-url`](resources/finding-dev-server-url/SKILL.md) - Scan running terminals for dev server URLs and ports, report what's running where, and open the app in Cursor's browser.
 - [`monitoring-terminal-errors`](resources/monitoring-terminal-errors/SKILL.md) - Watch a running process for crashes and stack traces, navigate to the failing file, and fix it automatically.
 - [`detecting-port-conflicts`](resources/detecting-port-conflicts/SKILL.md) - Detect `EADDRINUSE` errors, find what's using the port, and resolve by killing the process or suggesting an alternative.
@@ -37,7 +36,6 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`responsive-testing`](resources/responsive-testing/SKILL.md) - Open the app at multiple viewport sizes (mobile, tablet, desktop), screenshot each, and report layout breakage.
 - [`dark-mode-testing`](resources/dark-mode-testing/SKILL.md) - Toggle between light and dark mode in the browser, screenshot both, and flag missing token mappings or contrast issues.
 - [`accessibility-auditing`](resources/accessibility-auditing/SKILL.md) - Use the browser's aria tree to audit for missing labels, broken tab order, ARIA misuse, and contrast issues.
-- [`api-smoke-testing`](resources/api-smoke-testing/SKILL.md) - Discover API routes from the codebase, hit every endpoint, and report which ones return errors.
 - [`form-testing`](resources/form-testing/SKILL.md) - Fill and submit every form with valid/invalid data using the browser, verifying validation, error states, and success flows.
 - [`parallel-test-fixing`](resources/parallel-test-fixing/SKILL.md) - When multiple tests fail, assign each to a separate subagent that fixes it independently in parallel.
 - [`codebase-onboarding`](resources/codebase-onboarding/SKILL.md) - Launch parallel explore subagents to investigate architecture, data models, auth, APIs, and deployment — then synthesize an onboarding doc.
@@ -70,6 +68,15 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`python-tdd-with-uv`](resources/python-tdd-with-uv/SKILL.md) - Test-driven development in Python using uv — red-green-refactor cycle with vertical slicing and fast dependency management.
 - [`mattpocock-tdd`](https://github.com/mattpocock/skills/tree/main/tdd) - Vertical-slice TDD for AI agents — one test, one implementation, repeat. Prevents over-engineering and speculative tests.
 - [`anthropic-webapp-testing`](https://github.com/anthropics/skills/tree/main/skills/webapp-testing) - Automated browser testing for web apps with screenshot verification and interaction flows.
+- [`api-smoke-testing`](resources/api-smoke-testing/SKILL.md) - Discover API routes from the codebase, hit every endpoint, and report which ones return errors.
+
+### Workflow
+
+- [`babysitting-pr`](resources/babysitting-pr/SKILL.md) - Monitor an open PR for CI failures, review comments, and merge conflicts — then fix them automatically to keep the PR merge-ready.
+- [`creating-pr`](resources/creating-pr/SKILL.md) - Create clean, review-ready pull requests with conventional titles, structured descriptions, and linked issues.
+- [`writing-commit-messages`](resources/writing-commit-messages/SKILL.md) - Write conventional commit messages with type prefixes, scopes, and meaningful descriptions.
+- [`incident-response`](resources/incident-response/SKILL.md) - Handle production incidents — triage severity, mitigate, communicate status, and write blameless postmortems.
+- [`systematic-debugging`](resources/systematic-debugging/SKILL.md) - Structured debugging methodology — reproduce, isolate, hypothesize, and verify using git bisect, binary search, and logging.
 
 ### Infrastructure & DevOps
 
@@ -77,7 +84,6 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`setting-up-ci`](resources/setting-up-ci/SKILL.md) - Set up a GitHub Actions CI/CD pipeline with linting, testing, type-checking, and deployment.
 - [`setting-up-terraform`](resources/setting-up-terraform/SKILL.md) - Infrastructure-as-code with provider config, modules, remote state, and CI integration.
 - [`antonbabenko-terraform`](https://github.com/antonbabenko/terraform-skill) - Terraform and OpenTofu skill — testing, modules, CI/CD, and production patterns.
-- [`incident-response`](resources/incident-response/SKILL.md) - Handle production incidents — triage severity, mitigate, communicate status, and write blameless postmortems.
 - [`kubernetes-deploying`](resources/kubernetes-deploying/SKILL.md) - Deploy to Kubernetes — Deployments, Services, Ingress, ConfigMaps, health checks, and autoscaling.
 
 ### Code Quality & Security
@@ -93,7 +99,6 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`sentry-skill-scanner`](https://github.com/getsentry/skills/tree/main/plugins/sentry-skills/skills/skill-scanner) - Scan agent skills for security issues — prompt injection, exfiltration, and unsafe tool use.
 - [`verifying-markdown-formatting`](resources/verifying-markdown-formatting/SKILL.md) - Verify headings, lists, links, code blocks, spacing, and style consistency in Markdown files.
 - [`fixing-broken-links`](resources/fixing-broken-links/SKILL.md) - Crawl all URLs in a file, test each for HTTP 200, and fix or replace any broken links.
-- [`systematic-debugging`](resources/systematic-debugging/SKILL.md) - Structured debugging methodology — reproduce, isolate, hypothesize, and verify using git bisect, binary search, and logging.
 
 ### Dependencies
 
@@ -133,8 +138,6 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 ### Utilities
 
 - [`exporting-to-png`](resources/exporting-to-png/SKILL.md) - Export code snippets, diagrams, terminal output, or UI components to PNG images via headless browser or CLI tools.
-- [`creating-pr`](resources/creating-pr/SKILL.md) - Create clean, review-ready pull requests with conventional titles, structured descriptions, and linked issues.
-- [`writing-commit-messages`](resources/writing-commit-messages/SKILL.md) - Write conventional commit messages with type prefixes, scopes, and meaningful descriptions.
 - [`prompt-engineering`](resources/prompt-engineering/SKILL.md) - Write effective LLM prompts — system prompts, few-shot examples, chain-of-thought, and structured output.
 - [`seo-auditing`](resources/seo-auditing/SKILL.md) - Audit technical SEO — meta tags, structured data, Open Graph, sitemaps, and Core Web Vitals.
 - [`writing-copy`](resources/writing-copy/SKILL.md) - Write marketing copy for landing pages, CTAs, emails, microcopy, and product descriptions.
