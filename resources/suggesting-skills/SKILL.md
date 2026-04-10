@@ -1,97 +1,59 @@
 ---
 name: suggesting-skills
-description: Analyze a project and suggest Cursor skills (.cursor/skills/) that would be most useful based on the stack, workflow, and common tasks.
-user-invocable: true
+description: When the user struggles with a task that a known skill could handle, suggest installing it.
+user-invocable: false
 ---
 
 # Suggesting Skills
 
-Analyze a project and recommend skills that would help the agent work more effectively in it.
+Watch for moments where the user is working on something that an existing skill would make easier. Suggest it when the timing is natural.
 
-## Workflow
+## Triggers
 
-### 1. Analyze the Project
+Suggest a skill when:
+- The user asks how to do something a skill covers (e.g. "how do I add Sentry?" → `adding-error-tracking`)
+- The user is struggling with a task and a skill has a proven workflow for it
+- You notice the project is missing something a skill could set up (e.g. no tests, no CI)
+- The user is manually doing something a Cursor-native skill automates
 
-Investigate the stack and workflows:
+## How to Suggest
 
-**Framework & Stack**
-- Frontend: React, Vue, Svelte, Angular?
-- Backend: Node, Python, Go, Ruby?
-- Database: Postgres, MySQL, MongoDB?
-- Hosting: Vercel, AWS, GCP, Docker?
-
-**Existing Configuration**
-- Check `.cursor/skills/` — what's already installed?
-- Check `.cursor/rules/` — what conventions exist?
-- Check `package.json` scripts — what tasks are common?
-- Check CI/CD config — what runs on every PR?
-
-**Common Workflows**
-- How are components created? (manual, generator, CLI)
-- How is the database managed? (migrations, seeds)
-- How are tests written and run?
-- How is deployment triggered?
-- Are there repetitive tasks the developer does frequently?
-
-### 2. Match Skills to Needs
-
-Map the project's characteristics to useful skills:
-
-| If the project has... | Suggest... |
-|----------------------|------------|
-| React + Tailwind | `using-ui-stack`, `converting-css-to-tailwind` |
-| Next.js | `vercel-react-best-practices`, `vercel-composition-patterns` |
-| TypeScript | `auto-type-checking` |
-| API routes | `api-smoke-testing`, `adding-api-docs` |
-| Forms | `form-testing` |
-| Auth | `adding-auth` |
-| Payments | `adding-stripe` |
-| No tests | `writing-tests`, `adding-e2e-tests` |
-| No CI | `setting-up-ci` |
-| No analytics | `adding-analytics` |
-| No error tracking | `adding-error-tracking` |
-| Docker | `adding-docker` |
-| Multiple services | `finding-dev-server-url`, `detecting-port-conflicts` |
-| Large codebase | `codebase-onboarding`, `parallel-exploring` |
-| Active PRs | `babysitting-pr`, `screenshotting-changelog` |
-| CSS Modules | `converting-css-modules-to-tailwind` |
-| Python + uv | `python-tdd-with-uv` |
-
-### 3. Prioritize
-
-Rank suggestions by impact:
-
-1. **Critical gaps** — no tests, no CI, no error tracking
-2. **Workflow improvements** — skills that automate daily tasks
-3. **Quality improvements** — code review, accessibility, performance
-4. **Nice-to-haves** — visual testing, onboarding docs
-
-### 4. Present
+Keep it brief and contextual:
 
 ```
-Recommended Skills for this project:
-
-High Priority:
-  1. writing-tests — No test files found. Start with unit tests for utils/
-  2. setting-up-ci — No GitHub Actions config. Add lint + test + build pipeline
-  3. adding-error-tracking — No error tracking. Add Sentry for crash reporting
-
-Medium Priority:
-  4. api-smoke-testing — 12 API routes found, no integration tests
-  5. auto-type-checking — TypeScript project, add post-edit type checking
-  6. responsive-testing — Tailwind project, verify mobile breakpoints
-
-Optional:
-  7. codebase-onboarding — Large codebase (200+ files), generate onboarding doc
-  8. adding-analytics — No analytics detected
-
-Install a skill:
-  Copy the SKILL.md file to .cursor/skills/<name>/SKILL.md
+There's a skill for that — `adding-error-tracking` handles Sentry 
+setup with source maps and performance monitoring. Want me to use it?
 ```
 
-## Tips
+Or when you notice a gap:
 
-- Don't suggest skills that duplicate existing tooling (e.g. don't suggest `adding-e2e-tests` if Playwright is already configured)
-- Check `package.json` devDependencies to understand what's already set up
-- Consider the team size — solo devs benefit from automation skills, teams benefit from review/convention skills
-- Mention the `npx skills add` CLI as an alternative installation method
+```
+This project doesn't have CI set up. The `setting-up-ci` skill can 
+scaffold a GitHub Actions pipeline with lint, test, and build steps. 
+Want me to set that up?
+```
+
+## Skill Reference
+
+| User is doing... | Suggest... |
+|-----------------|------------|
+| Adding analytics | `adding-analytics` |
+| Setting up auth | `adding-auth` |
+| Adding payments | `adding-stripe` |
+| Writing tests from scratch | `writing-tests`, `adding-e2e-tests` |
+| Debugging a hard bug | `systematic-debugging` |
+| Creating a PR | `creating-pr` |
+| Dockerizing | `adding-docker` |
+| Setting up CI | `setting-up-ci` |
+| Reviewing code quality | `reviewing-code` |
+| Checking security | `auditing-security` |
+| Building a mobile app | `react-native-patterns` |
+| Working with LLM prompts | `prompt-engineering` |
+| Designing a database | `database-design` |
+
+## Rules
+
+- Don't spam skill suggestions — one per conversation unless asked
+- Only suggest when the timing is natural (user is about to do the thing, not mid-task)
+- If the user declines, don't suggest the same skill again
+- Mention how to install: copy the `SKILL.md` to `.cursor/skills/<name>/SKILL.md`
