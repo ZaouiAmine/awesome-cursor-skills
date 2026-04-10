@@ -77,6 +77,8 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`setting-up-ci`](resources/setting-up-ci/SKILL.md) - Set up a GitHub Actions CI/CD pipeline with linting, testing, type-checking, and deployment.
 - [`setting-up-terraform`](resources/setting-up-terraform/SKILL.md) - Infrastructure-as-code with provider config, modules, remote state, and CI integration.
 - [`antonbabenko-terraform`](https://github.com/antonbabenko/terraform-skill) - Terraform and OpenTofu skill — testing, modules, CI/CD, and production patterns.
+- [`incident-response`](resources/incident-response/SKILL.md) - Handle production incidents — triage severity, mitigate, communicate status, and write blameless postmortems.
+- [`kubernetes-deploying`](resources/kubernetes-deploying/SKILL.md) - Deploy to Kubernetes — Deployments, Services, Ingress, ConfigMaps, health checks, and autoscaling.
 
 ### Code Quality & Security
 
@@ -91,6 +93,7 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`sentry-skill-scanner`](https://github.com/getsentry/skills/tree/main/plugins/sentry-skills/skills/skill-scanner) - Scan agent skills for security issues — prompt injection, exfiltration, and unsafe tool use.
 - [`verifying-markdown-formatting`](resources/verifying-markdown-formatting/SKILL.md) - Verify headings, lists, links, code blocks, spacing, and style consistency in Markdown files.
 - [`fixing-broken-links`](resources/fixing-broken-links/SKILL.md) - Crawl all URLs in a file, test each for HTTP 200, and fix or replace any broken links.
+- [`systematic-debugging`](resources/systematic-debugging/SKILL.md) - Structured debugging methodology — reproduce, isolate, hypothesize, and verify using git bisect, binary search, and logging.
 
 ### Dependencies
 
@@ -107,6 +110,7 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`vercel-web-design-guidelines`](https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines) - UI code auditing for accessibility, UX, and performance compliance.
 - [`vercel-react-view-transitions`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions) - Implement the View Transitions API in React/Next.js for smooth page and component animations.
 - [`vercel-composition-patterns`](https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns) - Component composition, code splitting, and server/client boundary patterns for Next.js.
+- [`react-native-patterns`](resources/react-native-patterns/SKILL.md) - Build mobile apps with React Native and Expo — navigation, platform-specific code, performance, and native modules.
 
 ### Planning & Architecture
 
@@ -114,15 +118,26 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`mattpocock-improve-architecture`](https://github.com/mattpocock/skills/tree/main/improve-codebase-architecture) - Analyze a codebase and propose concrete architecture improvements.
 - [`mattpocock-grill-me`](https://github.com/mattpocock/skills/tree/main/grill-me) - Challenge assumptions and push back on ideas before committing to an approach.
 - [`anthropic-mcp-builder`](https://github.com/anthropics/skills/tree/main/skills/mcp-builder) - Build Model Context Protocol servers from scratch with tool definitions and transport setup.
+- [`architecture-decision-records`](resources/architecture-decision-records/SKILL.md) - Document technical decisions as ADRs with context, options considered, and rationale.
+- [`database-design`](resources/database-design/SKILL.md) - Design database schemas — tables, relationships, indexes, constraints, and ORM setup.
 
 ### Documentation
 
 - [`adding-api-docs`](resources/adding-api-docs/SKILL.md) - Generate OpenAPI/Swagger documentation with interactive docs UI.
 - [`anthropic-doc-coauthoring`](https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring) - Structured workflow for co-authoring technical documentation with an AI agent.
+- [`anthropic-docx`](https://github.com/anthropics/skills/tree/main/skills/docx) - Generate Word documents (DOCX) programmatically with formatting, tables, and images.
+- [`anthropic-pdf`](https://github.com/anthropics/skills/tree/main/skills/pdf) - Generate PDF documents with layouts, charts, and structured content.
+- [`anthropic-pptx`](https://github.com/anthropics/skills/tree/main/skills/pptx) - Create PowerPoint presentations with slides, layouts, and visual content.
+- [`anthropic-xlsx`](https://github.com/anthropics/skills/tree/main/skills/xlsx) - Build Excel spreadsheets with formulas, charts, and data formatting.
 
 ### Utilities
 
 - [`exporting-to-png`](resources/exporting-to-png/SKILL.md) - Export code snippets, diagrams, terminal output, or UI components to PNG images via headless browser or CLI tools.
+- [`creating-pr`](resources/creating-pr/SKILL.md) - Create clean, review-ready pull requests with conventional titles, structured descriptions, and linked issues.
+- [`writing-commit-messages`](resources/writing-commit-messages/SKILL.md) - Write conventional commit messages with type prefixes, scopes, and meaningful descriptions.
+- [`prompt-engineering`](resources/prompt-engineering/SKILL.md) - Write effective LLM prompts — system prompts, few-shot examples, chain-of-thought, and structured output.
+- [`seo-auditing`](resources/seo-auditing/SKILL.md) - Audit technical SEO — meta tags, structured data, Open Graph, sitemaps, and Core Web Vitals.
+- [`writing-copy`](resources/writing-copy/SKILL.md) - Write marketing copy for landing pages, CTAs, emails, microcopy, and product descriptions.
 
 ## Plugins
 
