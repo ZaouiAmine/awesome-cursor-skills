@@ -30,6 +30,7 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`parallel-exploring`](resources/parallel-exploring/SKILL.md) - Explore a large codebase fast by launching multiple read-only subagents that investigate different areas simultaneously.
 - [`grinding-until-pass`](resources/grinding-until-pass/SKILL.md) - Keep iterating autonomously — fix, run, check, repeat — until tests pass, the build succeeds, or linting is clean.
 - [`babysitting-pr`](resources/babysitting-pr/SKILL.md) - Monitor an open PR for CI failures, review comments, and merge conflicts — then fix them automatically to keep the PR merge-ready.
+- [`finding-dev-server-url`](resources/finding-dev-server-url/SKILL.md) - Scan running terminals for dev server URLs and ports, report what's running where, and open the app in Cursor's browser.
 
 ### Analytics & Tracking
 
