@@ -21,6 +21,8 @@ Ready-to-use `SKILL.md` files you can copy into your `.cursor/skills/` directory
 
 Skills that harness Cursor's unique agent capabilities — things only an AI inside Cursor can do.
 
+- [`suggesting-cursor-rules`](resources/suggesting-cursor-rules/SKILL.md) - Analyze a codebase and generate `.cursor/rules/` files that encode the project's conventions and patterns.
+- [`suggesting-cursor-hooks`](resources/suggesting-cursor-hooks/SKILL.md) - Analyze a project and suggest `.cursor/hooks.json` scripts that automate quality checks around agent actions.
 - [`switching-projects`](resources/switching-projects/SKILL.md) - Switch the active workspace to a different project using the `cursor-app-control` MCP, without opening a new window.
 - [`visual-qa-testing`](resources/visual-qa-testing/SKILL.md) - Open the app in Cursor's built-in browser, take screenshots, check console errors, and audit network requests after making changes.
 - [`verifying-in-browser`](resources/verifying-in-browser/SKILL.md) - Start the dev server, open the app side-by-side with your code, and verify rendering, console, and network health.
@@ -41,8 +43,6 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`codebase-onboarding`](resources/codebase-onboarding/SKILL.md) - Launch parallel explore subagents to investigate architecture, data models, auth, APIs, and deployment — then synthesize an onboarding doc.
 - [`comparing-branches-visually`](resources/comparing-branches-visually/SKILL.md) - Run two branches on different ports, screenshot the same pages from each, and produce a visual diff for PRs.
 - [`auto-type-checking`](resources/auto-type-checking/SKILL.md) - Run `tsc --noEmit` after file edits to catch type errors immediately. Supports Cursor hooks for automation.
-- [`suggesting-cursor-rules`](resources/suggesting-cursor-rules/SKILL.md) - Analyze a codebase and generate `.cursor/rules/` files that encode the project's conventions and patterns.
-- [`suggesting-cursor-hooks`](resources/suggesting-cursor-hooks/SKILL.md) - Analyze a project and suggest `.cursor/hooks.json` scripts that automate quality checks around agent actions.
 - [`suggesting-skills`](resources/suggesting-skills/SKILL.md) - Analyze a project's stack and workflows, then recommend which skills would be most useful to install.
 
 ### Analytics & Tracking
