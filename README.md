@@ -43,6 +43,7 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`best-of-n-solving`](resources/best-of-n-solving/SKILL.md) - Try multiple approaches to a hard problem in parallel using isolated git worktrees, then pick the best solution.
 - [`parallel-exploring`](resources/parallel-exploring/SKILL.md) - Explore a large codebase fast by launching multiple read-only subagents that investigate different areas simultaneously.
 - [`grinding-until-pass`](resources/grinding-until-pass/SKILL.md) - Keep iterating autonomously — fix, run, check, repeat — until tests pass, the build succeeds, or linting is clean.
+- [`babysitting-pr`](resources/babysitting-pr/SKILL.md) - Monitor an open PR for CI failures, review comments, and merge conflicts — then fix them automatically to keep the PR merge-ready.
 
 ### Analytics & Tracking
 
@@ -61,6 +62,7 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 ### Testing
 
 - [`adding-e2e-tests`](resources/adding-e2e-tests/SKILL.md) - Set up Playwright with config, example tests, page objects, and CI integration.
+- [`writing-tests`](resources/writing-tests/SKILL.md) - Analyze existing code and write comprehensive unit and integration tests with proper mocking, edge cases, and assertions.
 
 ### Infrastructure & DevOps
 
