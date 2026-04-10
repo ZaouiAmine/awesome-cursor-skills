@@ -14,6 +14,8 @@ Cursor Skills are reusable `SKILL.md` instruction files that teach the AI agent 
 - [Resources](#resources)
 - [Contributing](#contributing)
 
+> **New:** The [Cursor-Native](#cursor-native) skills section covers skills that tap into Cursor's unique agent capabilities — built-in browser, parallel subagents, worktrees, project switching, and CPU profiling.
+
 ---
 
 ## Featured
@@ -28,6 +30,19 @@ Standout skills and collections that are especially useful across many projects.
 ## Skills
 
 Ready-to-use `SKILL.md` files you can copy into your `.cursor/skills/` directory. Each one teaches the agent a specific engineering workflow.
+
+### Cursor-Native
+
+Skills that harness Cursor's unique agent capabilities — things only an AI inside Cursor can do.
+
+- [Switch Project](resources/switch-project/SKILL.md) - Switch the active workspace to a different project using the `cursor-app-control` MCP, without opening a new window.
+- [Visual QA](resources/visual-qa/SKILL.md) - Open the app in Cursor's built-in browser, take screenshots, check console errors, and audit network requests after making changes.
+- [Verify in Browser](resources/verify-in-browser/SKILL.md) - Start the dev server, open the app side-by-side with your code, and verify rendering, console, and network health.
+- [Performance Profile](resources/performance-profile/SKILL.md) - Profile CPU performance of a running app using Cursor's browser profiler to capture call stacks and identify slow functions.
+- [Screenshot Changelog](resources/screenshot-changelog/SKILL.md) - Generate visual before/after PR descriptions by screenshotting UI changes across branches.
+- [Best-of-N Solve](resources/best-of-n-solve/SKILL.md) - Try multiple approaches to a hard problem in parallel using isolated git worktrees, then pick the best solution.
+- [Parallel Explore](resources/parallel-explore/SKILL.md) - Explore a large codebase fast by launching multiple read-only subagents that investigate different areas simultaneously.
+- [Grind Until Pass](resources/grind-until-pass/SKILL.md) - Keep iterating autonomously — fix, run, check, repeat — until tests pass, the build succeeds, or linting is clean.
 
 ### Analytics & Tracking
 
