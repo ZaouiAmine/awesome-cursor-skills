@@ -45,6 +45,11 @@ Skills that harness Cursor's unique agent capabilities — things only an AI ins
 - [`comparing-branches-visually`](resources/comparing-branches-visually/SKILL.md) - Run two branches on different ports, screenshot the same pages from each, and produce a visual diff for PRs.
 - [`auto-type-checking`](resources/auto-type-checking/SKILL.md) - Run `tsc --noEmit` after file edits to catch type errors immediately. Supports Cursor hooks for automation.
 - [`suggesting-skills`](resources/suggesting-skills/SKILL.md) - When you're struggling with a task a known skill handles, the agent suggests installing it.
+- [`parallel-ci-triage`](resources/parallel-ci-triage/SKILL.md) - Fetch failing GitHub Actions logs, assign each failing job to a parallel subagent, fix independently, then merge and re-run CI.
+- [`parallel-code-review`](resources/parallel-code-review/SKILL.md) - Run four read-only subagents in parallel — security, performance, correctness, readability — and merge into one review report.
+- [`network-request-auditing`](resources/network-request-auditing/SKILL.md) - Use the browser's network log to flag failed requests, slowness, duplicates, and risky payloads after real user interactions.
+- [`recording-browser-flow-as-test`](resources/recording-browser-flow-as-test/SKILL.md) - Walk a flow in Cursor's browser, log each step, then emit a Playwright spec using role/name locators from the accessibility tree.
+- [`building-skills-from-patterns`](resources/building-skills-from-patterns/SKILL.md) - Turn repeated multi-step workflows into a new `SKILL.md` under `.cursor/skills/` so the agent can reuse them.
 
 ### Analytics & Tracking
 
